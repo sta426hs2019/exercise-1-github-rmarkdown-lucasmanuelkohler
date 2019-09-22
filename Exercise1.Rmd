@@ -1,0 +1,41 @@
+---
+title: "exercise1"
+author: "Kohler Lucas"
+date: "9/22/2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Exercise 1, Part b
+
+### Sampling
+
+First, a hundret value from a log-normal distribution are sampled and stored in an object called "values".
+```{r}
+values <- rlnorm(100,1,.25)
+```
+
+### Plots
+
+Then two histogram of the values are created, where the second is on log scale.
+```{r}
+hist(values,main="histogram 1")
+hist(log(values),main="histogram 2")
+```
+
+### Inference
+
+The empirical mean and variance of our sample can be calculated by the built in functions "mean" and "var". 
+The empirical mean is:
+```{r}
+mean(values)
+```
+and the empirical variance is:
+```{r}
+var(values)
+```
